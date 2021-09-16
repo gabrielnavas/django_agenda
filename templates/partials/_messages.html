@@ -1,0 +1,8 @@
+{% if messages %}
+  {% for message in messages %}
+    <div class="mt-4 alert {{ message.tags }}" 
+      role="alert">
+      {{ message }} 
+    </div>
+  {% endfor %}
+{% endif %}

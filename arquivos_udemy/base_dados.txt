@@ -1,0 +1,13 @@
+CONTATOS
+id: INT (automático)
+nome: STR * (obrigatório)
+sobrenome: STR (opcional)
+telefone: STR * (obrigatório)
+email: STR (opcional)
+data_criacao: DATETIME (automático)
+descricao: texto
+categoria: CATEGORIA (outro model)
+
+ CATEGORIA
+ id: INT
+ nome: STR * (obrigatório)
