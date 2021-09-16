@@ -36,7 +36,7 @@ class RegisterUserUsecase:
         self.__validate_email = validate_email
         self.__user_repository = user_repository
 
-    def handle(self, user: User) -> User:
+    def handle(self, user: User) -> None:
         self.__verify_valid_email(user.email)
         self.__password_verify_correct(
             user.password, user.password_confirmation)
@@ -49,7 +49,6 @@ class RegisterUserUsecase:
             email=user.email,
             password=user.password,
         )
-        return user
 
     def __verify_email_exists(self, email):
         if self.__user_repository.filter(email=email).exists():
